@@ -34,7 +34,7 @@ const Footer = () => {
         from_name: "Website Subscriber",
         from_email: email,
         message: `New subscription request from the website footer.`,
-        to_name: 'IntraSphere Team',
+        to_name: 'Intrasphere Labs Team',
         reply_to: email
       };
       
@@ -66,17 +66,31 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="bg-black text-white pt-16 pb-8 w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 pb-10 border-b border-gray-700">
+    <footer id="contact" className="bg-black text-white pt-24 pb-12 w-full border-t border-white/5">
+      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        {/* Pre-footer CTA */}
+        <div className="text-center mb-24">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
+            You've reached the end — <br className="hidden md:block" />
+            <span className="text-blue-500 italic">now let's start something new!</span>
+          </h2>
+          <p className="text-xl text-gray-400 mb-10 font-medium tracking-wide">
+            Let’s Connect. Trust us, we are <span className="text-white border-b-2 border-blue-600">good at this :)</span>
+          </p>
+          <a 
+            href="#contact-form" 
+            className="inline-flex items-center px-10 py-5 bg-white text-black font-bold rounded-2xl hover:bg-gray-200 transition-all shadow-xl hover:shadow-blue-500/10 active:scale-95 group"
+          >
+            Let's Connect
+            <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-16 pb-16 border-b border-white/10">
           <div className="lg:col-span-2">
-            <img 
-              src="/lovable-uploads/7d120ee6-3614-4b75-9c35-716d54490d67.png" 
-              alt="IntraSphere" 
-              className="h-10 w-auto mb-6 invert" // Added invert to make logo white
-            />
+            <h2 className="text-2xl font-bold mb-8 text-white tracking-widest uppercase">Intrasphere Labs</h2>
             <p className="text-gray-300 mb-6">
-              Technologies is your end-to-end smart product development partner. We combine software & AI, and production expertise to turn connected product visions into market reality.
+              Intrasphere Labs is your end-to-end smart product development partner. We combine software & AI, and production expertise to turn connected product visions into market reality.
             </p>
             <p className="text-gray-300 mb-6">
               Nandhyal<br />
@@ -84,7 +98,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://www.linkedin.com/company/teamintrasphere/" 
+                href="https://www.linkedin.com/company/teamintrasphere-labs/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-gray-700 hover:text-white"
@@ -134,7 +148,7 @@ const Footer = () => {
         
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} IntraSphere All rights reserved.
+            © {new Date().getFullYear()} Intrasphere Labs All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy-policy" className="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</Link>

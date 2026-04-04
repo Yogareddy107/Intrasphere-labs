@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactInfo from '@/components/ContactInfo';
 import FloatingContactButton from '@/components/FloatingContactButton';
+import CookieConsent from '@/components/CookieConsent';
 
 type PageLayoutProps = {
   children: React.ReactNode;
@@ -20,12 +21,13 @@ const PageLayout = ({ children, showContact = true }: PageLayoutProps) => {
   }, [location]);
 
   return (
-    <div className="min-h-screen bg-white w-full max-w-[100vw] overflow-x-hidden">
+    <div className="min-h-screen bg-white w-full max-w-[100vw] overflow-x-hidden relative">
       <Navbar />
       {children}
       {showContact && <ContactInfo />}
       <Footer />
       {showContact && <FloatingContactButton />}
+      <CookieConsent />
     </div>
   );
 };

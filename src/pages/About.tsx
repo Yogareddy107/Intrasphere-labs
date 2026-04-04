@@ -29,7 +29,7 @@ const About = () => {
               transition={{ duration: 0.5 }} 
               className="text-4xl font-bold mb-6"
             >
-              About IntraSphere
+              About Intrasphere Labs
             </motion.h1>
             
             <div className="prose prose-lg max-w-none">
@@ -51,7 +51,7 @@ const About = () => {
                 >
                   <h2 className="text-3xl font-bold">Our Mission</h2>
                   <p className="text-gray-600">
-                   At IntraSphere, we transform your digital ideas into powerful applications and modern websites that drive engagement, growth, and innovation.
+                   At Intrasphere Labs, we transform your digital ideas into powerful applications and modern websites that drive engagement, growth, and innovation.
 Our mission is to empower startups, enterprises, and creators with technology that makes a difference.
 
                   </p>
@@ -93,14 +93,14 @@ Our mission is to empower startups, enterprises, and creators with technology th
                 <h2 className="text-3xl font-bold mb-6">Our Story</h2>
                 <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
                   <p className="text-gray-600 mb-4">
-                   IntraSphere began with a simple yet powerful vision — to make app and website development smarter, faster, and more accessible for businesses and individuals alike.
+                   Intrasphere Labs began with a simple yet powerful vision — to make app and website development smarter, faster, and more accessible for businesses and individuals alike.
 
                   </p>
                   <p className="text-gray-600 mb-4">
               After years of refining our design systems, frameworks, and technology stack, we’ve built a flexible digital ecosystem capable of delivering everything from portfolio websites to enterprise-level applications with precision and creativity.
                   </p>
                   <p className="text-gray-600">
-                By 2025, IntraSphere had become a trusted development partner for clients worldwide — helping brands build impactful digital identities and powerful products that users love.
+                By 2025, Intrasphere Labs had become a trusted development partner for clients worldwide — helping brands build impactful digital identities and powerful products that users love.
 
                   </p>
                 </div>
@@ -122,7 +122,7 @@ Our mission is to empower startups, enterprises, and creators with technology th
                     {
                       name: "Yogananda Reddy",
                       role: "Founder",
-                      bio: "Leading IntraSphere with a vision to redefine how modern apps and websites are built and experienced.",
+                      bio: "Leading Intrasphere Labs with a vision to redefine how modern apps and websites are built and experienced.",
                       image: "/lovable-uploads/aa5291bd-2417-4c1e-9a02-0bcc71a92507.png"
                     },
                     {

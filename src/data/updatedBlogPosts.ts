@@ -34,11 +34,11 @@ export interface ContentSection {
 export const blogPosts: BlogPost[] = [
   {
     id: '7',
-  title: 'From Concept to Market: How IntraSphere Accelerates Connected Product Development',
+  title: 'From Concept to Market: How Intrasphere Labs Accelerates Connected Product Development',
     slug: 'concept-to-market-connected-product-development',
     excerpt: 'Discover how our end-to-end development approach transforms ambitious product visions into market-ready solutions faster than traditional methods.',
     date: 'July 15, 2025',
-  author: 'IntraSphere Technologies',
+  author: 'Intrasphere Labs',
     category: 'Product Development',
     imageUrl: '/lovable-uploads/idea_to_launch_blog_post_pic',
     keywords: [
@@ -53,11 +53,11 @@ export const blogPosts: BlogPost[] = [
       'product development acceleration',
       'IoT consulting'
     ],
-  metaDescription: 'Learn how IntraSphere transforms product concepts into market-ready connected solutions with our proven end-to-end development methodology.',
+  metaDescription: 'Learn how Intrasphere Labs transforms product concepts into market-ready connected solutions with our proven end-to-end development methodology.',
     content: [
       {
         type: 'paragraph',
-  content: 'In today\'s competitive marketplace, the ability to quickly transform innovative ideas into market-ready connected products can determine business success. At IntraSphere, we\'ve refined our development approach over 7+ years to eliminate common bottlenecks and accelerate time-to-market for ambitious product visions.'
+  content: 'In today\'s competitive marketplace, the ability to quickly transform innovative ideas into market-ready connected products can determine business success. At Intrasphere Labs, we\'ve refined our development approach over 7+ years to eliminate common bottlenecks and accelerate time-to-market for ambitious product visions.'
       },
       {
         type: 'heading',

@@ -6,6 +6,8 @@ import BlogPostCard from '@/components/BlogPostCard';
 import { blogPosts } from '@/data/blogPosts';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
+import { motion } from 'framer-motion';
+
 const BlogPreview = () => {
   // Get the 3 most recent blog posts
   const recentPosts = [...blogPosts]
@@ -13,26 +15,32 @@ const BlogPreview = () => {
     .slice(0, 3);
 
   return (
-    <section id="blog" className="py-12 md:py-24 px-4 md:px-12 bg-white">
+    <section id="blog" className="py-12 md:py-24 px-4 md:px-12 bg-white overflow-hidden">
       <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-12"
+        >
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Newspaper size={20} className="text-black" />
               <span className="text-black font-medium">Our Blog</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Latest Updates</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black font-outfit">Latest Updates</h2>
             <p className="text-gray-800 max-w-xl">
               Explore our latest insights on connected product development, IoT innovation, and industry trends.
             </p>
           </div>
           <Link to="/blog" className="mt-4 md:mt-0">
-            <Button variant="outline" className="group border-black text-black hover:bg-black hover:text-white">
+            <Button variant="outline" className="group border-black text-black hover:bg-black hover:text-white rounded-xl">
               View All Posts
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>
-        </div>
+        </motion.div>
         
         <div className="relative">
           <ScrollArea className="w-full">

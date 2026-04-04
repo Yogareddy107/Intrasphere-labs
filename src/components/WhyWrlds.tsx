@@ -86,8 +86,8 @@ const WhyWrlds = () => {
         once: true,
         margin: "-100px"
       }} variants={containerVariants}>
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-            Why IntraSphere?
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 font-outfit">
+            Why Intrasphere Labs?
           </motion.h2>
           <motion.p variants={itemVariants} className="text-gray-600 text-lg max-w-3xl mx-auto">
 In a fast-changing digital world where user experience defines success, we craft exceptional websites and mobile applications that help brands grow, engage users, and stand out.          </motion.p>
@@ -138,7 +138,7 @@ In a fast-changing digital world where user experience defines success, we craft
         }} variants={containerVariants}>
           <motion.div variants={itemVariants} className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-             What IntraSphere Does for You
+             What Intrasphere Labs Does for You
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We transform your ideas into market-ready solutions with tangible benefits for your business

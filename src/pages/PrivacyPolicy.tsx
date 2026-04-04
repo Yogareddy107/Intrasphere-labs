@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
               
               <h2 className="text-2xl font-semibold mt-8 mb-4">1. Introduction</h2>
               <p className="text-gray-600 mb-4">
-                At IntraSphere Technologies ("we," "our," or "us"), we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                At Intrasphere Labs ("we," "our," or "us"), we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
               </p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4">2. Information We Collect</h2>

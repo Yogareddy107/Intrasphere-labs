@@ -3,6 +3,7 @@ import { Activity, Shield, HardHat, Zap, ArrowRight, Box, Truck, Code, CheckCirc
 import { cn } from '@/lib/utils';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion, AnimatePresence } from "framer-motion";
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Button } from "@/components/ui/button";
 
@@ -83,7 +84,13 @@ const Features = () => {
     <>
       <section id="features" className="py-16 md:py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
             <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
               What We Do
             </div>
@@ -93,10 +100,16 @@ const Features = () => {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We create custom web applications, mobile apps, and digital solutions that transform your business and engage your users.
             </p>
-          </div>
+          </motion.div>
 
           {/* Three Pillars Section */}
-          <div className="mb-20">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-20"
+          >
             <div className="text-center mb-12">
               <h3 className="text-2xl font-bold mb-4">Our Development Approach</h3>
               <p className="text-gray-600 max-w-2xl mx-auto">
@@ -106,32 +119,49 @@ const Features = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pillars.map((pillar, index) => (
-                <div key={index} className="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors"
+                >
                   <div className="w-12 h-12 bg-gray-200 flex items-center justify-center rounded-lg mx-auto mb-4">
                     {pillar.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3">{pillar.title}</h3>
                   <p className="text-gray-600 text-sm">{pillar.description}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
           
           {/* Industry Applications - Simplified grid */}
-          <div className="text-center mb-8 max-w-3xl mx-auto feature-item">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-8 max-w-3xl mx-auto feature-item"
+          >
             <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
               Industry Applications
             </div>
-            <h3 className="text-2xl font-bold mb-4">Solutions Across Industries</h3>
+            <h3 className="text-2xl font-bold mb-4 font-outfit">Solutions Across Industries</h3>
             <p className="text-gray-600">
               We build custom web and mobile applications for diverse sectors, delivering tailored solutions that drive results.
             </p>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16">
             {features.map((feature, index) => (
-              <div 
+              <motion.div 
                 key={index} 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="feature-item rounded-xl overflow-hidden transform transition-all duration-300 relative shadow-lg hover:-translate-y-1 h-[280px]"
                 onMouseEnter={() => setHoveredFeature(index)} 
                 onMouseLeave={() => setHoveredFeature(null)}
@@ -154,11 +184,11 @@ const Features = () => {
                       {feature.icon}
                       <span className="text-white/80 text-sm font-medium">{feature.category}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2 font-outfit">{feature.title}</h3>
                     <p className="text-white/90 text-sm">{feature.description}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -167,7 +197,13 @@ const Features = () => {
       {/* Development Process Section */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
             <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
               How We Work
             </div>
@@ -177,7 +213,7 @@ const Features = () => {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our streamlined 5-phase process takes your app or website from initial concept to successful launch with ongoing support.
             </p>
-          </div>
+          </motion.div>
 
           {isMobile ? (
             <Carousel className="w-full max-w-sm mx-auto">
@@ -298,17 +334,23 @@ const Features = () => {
       {/* Technology Stack Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
             <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
               Our Technology
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-outfit">
               Modern Tech Stack for Fast Delivery
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We leverage cutting-edge technologies and proven frameworks to build high-performance applications quickly and efficiently.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 h-full">
