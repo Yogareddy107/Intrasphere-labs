@@ -112,17 +112,20 @@ const Navbar = () => {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/careers">
-                  <NavigationMenuLink className={cn(
+                <a 
+                  href="https://intraspherelabscareer.vercel.app" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={cn(
                     navigationMenuTriggerStyle(), 
                     "transition-all duration-300 rounded-full text-xs font-bold uppercase tracking-widest px-4",
                     isScrolled 
                       ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50" 
                       : "text-gray-200 hover:text-white bg-transparent hover:bg-white/10"
-                  )}>
-                    Careers
-                  </NavigationMenuLink>
-                </Link>
+                  )}
+                >
+                  Careers
+                </a>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -212,19 +215,35 @@ const Navbar = () => {
                 { label: "Home", to: "/" },
                 { label: "About Us", to: "/about" },
                 { label: "Learn More", to: "/tech-details" },
-                { label: "Careers", to: "/careers" }
+                { label: "Careers", to: "https://intraspherelabscareer.vercel.app", isExternal: true }
               ].map((link, idx) => (
-                <Link 
-                  key={idx}
-                  to={link.to} 
-                  className={cn(
-                    "block px-4 py-3 rounded-2xl text-sm font-bold uppercase tracking-widest transition-all",
-                    isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-white/10"
-                  )} 
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
+                link.isExternal ? (
+                  <a 
+                    key={idx}
+                    href={link.to} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      "block px-4 py-3 rounded-2xl text-sm font-bold uppercase tracking-widest transition-all",
+                      isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-white/10"
+                    )} 
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link 
+                    key={idx}
+                    to={link.to} 
+                    className={cn(
+                      "block px-4 py-3 rounded-2xl text-sm font-bold uppercase tracking-widest transition-all",
+                      isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-white/10"
+                    )} 
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
               
               <div className="pt-4 border-t border-gray-100/10 grid grid-cols-2 gap-3">

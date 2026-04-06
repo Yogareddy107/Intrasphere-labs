@@ -161,10 +161,15 @@ Our mission is to empower startups, enterprises, and creators with technology th
             </div>
             
             <div className="mt-16 pt-8 border-t border-gray-200">
-              <Link to="/careers" className="inline-flex items-center px-5 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all group">
+              <a 
+                href="https://intraspherelabscareer.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-5 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all group"
+              >
                 Join Our Team
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
